@@ -1,0 +1,39 @@
+{
+   "checksum": "21e9ed79e3ad0c3157bca7aca2302dfc",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13180625629239910",
+            "id": "5",
+            "meta_info": {
+               "last_visited_desktop": "13180714177082130"
+            },
+            "name": "www.layabox.com",
+            "type": "url",
+            "url": "file:///C:/Workspace/LayaTS/bin/index.html"
+         } ],
+         "date_added": "13180625563003802",
+         "date_modified": "13180625629239910",
+         "id": "1",
+         "name": "书签栏",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13180625563003821",
+         "date_modified": "0",
+         "id": "2",
+         "name": "其他书签",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13180625563003824",
+         "date_modified": "0",
+         "id": "3",
+         "name": "移动设备书签",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

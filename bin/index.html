@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset='utf-8' />
+	<title>www.layabox.com</title>
+	<meta name='viewport' content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+	/>
+	<meta name="renderer" content="webkit"/>
+	<meta name='apple-mobile-web-app-capable' content='yes' />
+	<meta name='full-screen' content='true' />
+	<meta name='x5-fullscreen' content='true' />
+	<meta name='360-fullscreen' content='true' />
+	<meta name="laya" screenorientation ="landscape"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta http-equiv='expires' content='0' />
+	<meta http-equiv="Cache-Control" content="no-siteapp"/>
+</head>
+
+<body>
+	<!--以下引用了常用类库，如果不使用，可以删除-->
+	
+    <!--核心包，封装了显示对象渲染，事件，时间管理，时间轴动画，缓动，消息交互,socket，本地存储，鼠标触摸，声音，加载，颜色滤镜，位图字体等-->
+	<script type="text/javascript" src="libs/laya.core.js"></script>
+	<!--提供了微信小游戏的适配-->
+	<script type="text/javascript" src="libs/laya.wxmini.js"></script>
+	<!--封装了webgl渲染管线，如果使用webgl渲染，可以在初始化时调用Laya.init(1000,800,laya.webgl.WebGL);-->
+    <script type="text/javascript" src="libs/laya.webgl.js"></script>
+	<!--是动画模块，包含了swf动画，骨骼动画等-->
+    <script type="text/javascript" src="libs/laya.ani.js"></script>
+	<!--包含更多webgl滤镜，比如外发光，阴影，模糊以及更多-->
+    <script type="text/javascript" src="libs/laya.filter.js"></script>
+	<!--封装了html动态排版功能-->
+    <script type="text/javascript" src="libs/laya.html.js"></script>
+	<!--粒子类库-->
+    <script type="text/javascript" src="libs/laya.particle.js"></script>
+	<!--提供tileMap解析支持-->
+    <script type="text/javascript" src="libs/laya.tiledmap.js"></script>
+	<!--提供了制作UI的各种组件实现-->
+    <script type="text/javascript" src="libs/laya.ui.js"></script>
+	<!-- 物理引擎matter.js -->
+	<!--用户自定义顺序文件添加到这里-->
+	<!--jsfile--Custom-->
+	<script src="js/sear/Layaex.js"></script>
+	<script src="js/sear/webgl/WebGL.js"></script>
+
+	<script src="js/sear/interfaces/IDestroy.js"></script>
+
+	<script src="js/sear/Global.js"></script>
+
+	<script src="js/sear/pool/IPool.js"></script>
+	<script src="js/sear/pool/Pool.js"></script>
+
+	<script src="js/sear/struct/HashMap.js"></script>
+	<script src="js/sear/struct/HashList.js"></script>
+	<script src="js/sear/struct/Dictionary.js"></script>
+	<script src="js/sear/struct/Handler.js"></script>
+	<script src="js/sear/struct/Bytes.js"></script>
+
+	<script src="js/sear/maths/IPosition.js"></script>
+	<script src="js/sear/maths/Point.js"></script>
+	<script src="js/sear/maths/Rectangle.js"></script>
+	<script src="js/sear/maths/Direction8.js"></script>
+	<script src="js/sear/maths/MathEx.js"></script>
+
+	<script src="js/sear/frame/Timer.js"></script>
+	<script src="js/sear/frame/Frame.js"></script>
+
+	<script src="js/sear/event/EventDispatcher.js"></script>
+
+	<script src="js/sear/loader/LoadRecord.js"></script>
+	<script src="js/sear/loader/LoaderManager.js"></script>
+
+	<script src="js/sear/sound/SoundData.js"></script>
+	<script src="js/sear/sound/Sound.js"></script>
+	<script src="js/sear/sound/SoundDynaCtrl.js"></script>
+	<script src="js/sear/sound/SoundManager.js"></script>
+
+	<script src="js/sear/net/Bean.js"></script>
+	<script src="js/sear/net/Message.js"></script>
+	<script src="js/sear/net/MessagePool.js"></script>
+	<script src="js/sear/net/Socket.js"></script>
+	
+	<script src="js/sear/utils/FilterUtil.js"></script>
+	<script src="js/sear/utils/ShowUtil.js"></script>
+	<script src="js/sear/utils/UIUtil.js"></script>
+	<script src="js/sear/utils/TextUtil.js"></script>
+
+	<script src="js/sear/tools/BindPosition.js"></script>
+
+	<script src="js/sear/animation/TextureFrame.js"></script>
+	<script src="js/sear/animation/Animation.js"></script>
+
+	<script src="js/sear/ui/Layout.js"></script>
+	<script src="js/sear/ui/AutoBitmap.js"></script>
+	<script src="js/sear/ui/Text.js"></script>
+	<script src="js/sear/ui/Button.js"></script>
+	<script src="js/sear/ui/StateButton.js"></script>
+	<script src="js/sear/ui/HtmlLabel.js"></script>
+	<script src="js/sear/ui/Image.js"></script>
+	<script src="js/sear/ui/ImageLabel.js"></script>
+	<script src="js/sear/ui/InputLabel.js"></script>
+	<script src="js/sear/ui/Label.js"></script>
+	<script src="js/sear/ui/Slider.js"></script>
+	<script src="js/sear/ui/ProgressBar.js"></script>
+	<script src="js/sear/ui/VScrollBar.js"></script>
+	<script src="js/sear/ui/HScrollBar.js"></script>
+	<script src="js/sear/ui/ScrollPanel.js"></script>
+	<script src="js/sear/ui/ComboBox.js"></script>
+
+	<script src="js/sear/file/Filex.js"></script>
+
+	<script src="js/sear/pool/PoolPool.js"></script>
+
+	<script src="js/sear/Sear.js"></script>
+	<script src="js/sear/debug/Debug.js"></script>
+
+
+
+	<script src="js/sysui/SysUI.js"></script>
+	<script src="js/sysui/SysPrompt.js"></script>
+
+
+
+	<script src="js/uitool/config/Config.js"></script>
+	<script src="js/uitool/config/ComKey.js"></script>
+	<script src="js/uitool/config/ComData.js"></script>
+
+	<script src="js/uitool/ui/comkey/KeyItem.js"></script>
+	<script src="js/uitool/ui/comkey/KeyItemCtrl.js"></script>
+	<script src="js/uitool/ui/comkey/KeyCtrl.js"></script>
+
+	<script src="js/uitool/ui/tree/TreeItem.js"></script>
+	<script src="js/uitool/ui/tree/TreeCtrl.js"></script>
+
+	<script src="js/uitool/ui/select/UIBound.js"></script>
+
+	<script src="js/uitool/file/FileCtrl.js"></script>
+	<script src="js/uitool/record/Record.js"></script>
+	
+	<script src="js/uitool/ui/SelectCtrl.js"></script>
+	<script src="js/uitool/ui/PanelCtrl.js"></script>
+	<script src="js/uitool/ui/ComponentCtrl.js"></script>
+
+	<script src="js/uitool/ui/MainUI.js"></script>
+	<script src="js/uitool/UITool.js"></script>
+
+	<!--jsfile--Custom-->
+
+	<!--自定义的js(src文件夹下)文件自动添加到下面jsfile模块标签里面里-->
+	<!--删除标签，ide不会自动添加js文件，请谨慎操作-->
+	<!--jsfile--startTag-->
+	<script src="js/Test/TestA.js"></script>
+	<script src="js/sudoku/SudokuUI.js"></script>
+	<script src="js/sudoku/Sudoku.js"></script>
+	<script src="js/engine/net/Client.js"></script>
+	<script src="js/engine/engine.js"></script>
+	<script src="js/Test/TestB.js"></script>
+	<!--jsfile--endTag-->
+	<!--启动类添加到这里-->
+	<!--jsfile--Main-->
+	<script src="js/Main.js"></script>
+	<!--jsfile--Main-->
+</body>
+
+</html>
